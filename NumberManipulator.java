@@ -20,13 +20,26 @@ public class NumberManipulator
     }
 
     /**
+     * Returns the specified digit (from the left) for the given number.
      *
+     * @param num - the number
+     * @param nth - the digit desired (from left)
+     * @return      the specified digit from the num given.
      */
-    // getNthDigit
+    public static int getNthDigit(int num, int nth)
     {
+        int len = getNumDigits(num);
+        int d = len - nth;
+        int div = (int) (num / Math.pow(10, d));
+        int digit = div % 10;
 
-        // add your code here...
+        return digit;
 
+        // 668846 
+        // len = 6
+        // d = 6 - 5 = 1
+        // div = 668846 / 10^1 = 66884
+        // digit = 4
     }
 
     /**
